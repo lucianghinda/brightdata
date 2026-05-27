@@ -1,0 +1,18 @@
+[
+  {
+    "id": "synthetic-company-post-1",
+    "user_id": "synthetic-company-1",
+    "headline": "Company Page",
+    "post_text": "Synthetic company discovery post fixture.",
+    "date_posted": "2026-05-24",
+    "hashtags": ["company"],
+    "embedded_links": [],
+    "images": [],
+    "videos": [],
+    "likes": 12,
+    "comments_count": 3,
+    "repost": null,
+    "original_post": null,
+    "unexpected_field": "kept in raw"
+  }
+]

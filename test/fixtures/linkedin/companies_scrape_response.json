@@ -1,0 +1,58 @@
+[
+  {
+    "id": "synthetic-company-1",
+    "name": "Example Company",
+    "country_code": "US",
+    "locations": [
+      {
+        "city": "New York"
+      }
+    ],
+    "followers": 10000,
+    "employees_in_linkedin": 120,
+    "company_size": "51-200",
+    "industries": [
+      "Software Development"
+    ],
+    "specialties": [
+      "Data"
+    ],
+    "website": "https://example.com",
+    "founded": 2020,
+    "company_id": "12345",
+    "employees": [
+      {
+        "name": "Example Person"
+      }
+    ],
+    "similar": [
+      {
+        "name": "Similar Company"
+      }
+    ],
+    "updates": [
+      {
+        "text": "Synthetic update"
+      }
+    ],
+    "logo": "https://example.com/logo.png",
+    "image": "https://example.com/image.png",
+    "headquarters": {
+      "city": "New York"
+    },
+    "funding": {
+      "rounds": []
+    },
+    "investors": [
+      {
+        "name": "Example Investor"
+      }
+    ],
+    "affiliated": [
+      {
+        "name": "Affiliated Company"
+      }
+    ],
+    "unexpected_field": "kept in raw"
+  }
+]

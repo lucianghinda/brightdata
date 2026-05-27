@@ -1,0 +1,37 @@
+[
+  {
+    "id": "synthetic-profile-1",
+    "name": "Example Person",
+    "city": "New York",
+    "country_code": "US",
+    "position": "Founder",
+    "about": "Synthetic profile fixture for mocked tests.",
+    "current_company": {
+      "name": "Example Company"
+    },
+    "experience": [
+      {
+        "title": "Founder",
+        "company": "Example Company"
+      }
+    ],
+    "education": [
+      {
+        "school": "Example University"
+      }
+    ],
+    "connections": 500,
+    "followers": 1200,
+    "linkedin_id": "example-person",
+    "linkedin_num_id": "123456789",
+    "avatar": "https://example.com/avatar.jpg",
+    "banner_image": "https://example.com/banner.jpg",
+    "people_also_viewed": [
+      {
+        "name": "Related Person"
+      }
+    ],
+    "input_url": "https://www.linkedin.com/in/example-person/",
+    "unexpected_field": "kept in raw"
+  }
+]

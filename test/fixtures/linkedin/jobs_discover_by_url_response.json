@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.linkedin.com/jobs/view/456/",
+    "job_posting_id": "456",
+    "job_title": "Senior Ruby Developer",
+    "company_name": "Example Company",
+    "job_location": "New York",
+    "job_summary": "Synthetic discover-by-url job fixture.",
+    "job_base_pay_range": "$120k-$150k",
+    "job_posted_time": "2026-05-24",
+    "company_logo": "https://example.com/logo.png",
+    "unexpected_field": "kept in raw"
+  }
+]

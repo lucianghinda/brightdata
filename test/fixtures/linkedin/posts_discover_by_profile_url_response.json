@@ -1,0 +1,18 @@
+[
+  {
+    "id": "synthetic-profile-post-1",
+    "user_id": "synthetic-user-1",
+    "headline": "Founder at Example Company",
+    "post_text": "Synthetic profile discovery post fixture.",
+    "date_posted": "2026-05-24",
+    "hashtags": ["ruby"],
+    "embedded_links": [],
+    "images": [],
+    "videos": [],
+    "likes": 10,
+    "comments_count": 1,
+    "repost": null,
+    "original_post": null,
+    "unexpected_field": "kept in raw"
+  }
+]

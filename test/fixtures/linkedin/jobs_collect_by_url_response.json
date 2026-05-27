@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.linkedin.com/jobs/view/123/",
+    "job_posting_id": "123",
+    "job_title": "Ruby Developer",
+    "company_name": "Example Company",
+    "job_location": "Remote",
+    "job_summary": "Synthetic job fixture for mocked tests.",
+    "job_base_pay_range": "$100k-$120k",
+    "job_posted_time": "2026-05-24",
+    "company_logo": "https://example.com/logo.png",
+    "unexpected_field": "kept in raw"
+  }
+]

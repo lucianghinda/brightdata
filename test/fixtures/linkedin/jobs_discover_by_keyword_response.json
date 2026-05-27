@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://www.linkedin.com/jobs/view/789/",
+    "job_posting_id": "789",
+    "job_title": "Ruby Platform Engineer",
+    "company_name": "Keyword Company",
+    "job_location": "Remote",
+    "job_summary": "Synthetic discover-by-keyword job fixture.",
+    "job_base_pay_range": "$130k-$160k",
+    "job_posted_time": "2026-05-24",
+    "company_logo": "https://example.com/keyword-logo.png",
+    "unexpected_field": "kept in raw"
+  }
+]

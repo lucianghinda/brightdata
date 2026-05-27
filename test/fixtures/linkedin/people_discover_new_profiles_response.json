@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://linkedin.com/in/example-person",
+    "name": "Example Person",
+    "subtitle": "Founder",
+    "location": "Netherlands",
+    "experience": null,
+    "education": "Example University",
+    "avatar": "https://example.com/avatar.jpg",
+    "unexpected_field": "kept in raw"
+  }
+]

@@ -1,0 +1,45 @@
+AllCops:
+  TargetRubyVersion: 3.4
+  NewCops: enable
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+# Development dependencies live in the gemspec by deliberate gem convention,
+# so a single `bundle install` from a checkout pulls the full toolchain.
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - "test/**/*"
+
+Metrics/MethodLength:
+  Exclude:
+    - "test/**/*"
+
+Metrics/ClassLength:
+  Exclude:
+    - "test/**/*"
+
+# Test stubs carry full URLs and inline JSON headers; wrapping them hurts
+# readability more than the long line does.
+Layout/LineLength:
+  Exclude:
+    - "test/**/*"
+
+# Minitest names methods `test_...`, not predicates.
+Naming/PredicateMethod:
+  Exclude:
+    - "test/**/*"
+
+# Test doubles match the real object's signature even when an arg is unused.
+Lint/UnusedMethodArgument:
+  Exclude:
+    - "test/**/*"
