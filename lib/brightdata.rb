@@ -1,33 +1,21 @@
 # frozen_string_literal: true
 
-require "brightdata/version"
-require "brightdata/result"
-require "brightdata/errors"
-require "brightdata/datasets"
-require "brightdata/live_trace"
-require "brightdata/http"
-require "brightdata/snapshot"
-require "brightdata/linkedin/endpoint"
-require "brightdata/linkedin/types/profile_url_input"
-require "brightdata/linkedin/types/profile"
-require "brightdata/linkedin/profiles"
-require "brightdata/linkedin/types/company_url_input"
-require "brightdata/linkedin/types/company"
-require "brightdata/linkedin/companies"
-require "brightdata/linkedin/types/job_url_input"
-require "brightdata/linkedin/types/job_keyword_input"
-require "brightdata/linkedin/types/job"
-require "brightdata/linkedin/jobs"
-require "brightdata/linkedin/types/post_url_input"
-require "brightdata/linkedin/types/post_profile_url_input"
-require "brightdata/linkedin/types/post_company_url_input"
-require "brightdata/linkedin/types/post"
-require "brightdata/linkedin/posts"
-require "brightdata/linkedin/types/people_discover_input"
-require "brightdata/linkedin/types/discovered_profile"
-require "brightdata/linkedin/people"
-require "brightdata/linkedin/namespace"
-require "brightdata/client"
+require "zeitwerk"
+
+loader = Zeitwerk::Loader.for_gem
+loader.inflector.inflect("brightdata" => "BrightData", "http" => "HTTP", "linkedin" => "LinkedIn")
+# Foundational files that don't follow Zeitwerk's one-file-one-constant rule
+# are required eagerly below instead of autoloaded: version.rb defines VERSION
+# (not Version), errors.rb groups the whole error hierarchy, and result.rb
+# re-exports and reopens the external SimpleResult.
+loader.ignore("#{__dir__}/brightdata/version.rb")
+loader.ignore("#{__dir__}/brightdata/errors.rb")
+loader.ignore("#{__dir__}/brightdata/result.rb")
+loader.setup
+
+require_relative "brightdata/version"
+require_relative "brightdata/result"
+require_relative "brightdata/errors"
 
 # A typed, ergonomic Ruby client for Bright Data's Datasets v3 scraper APIs.
 #
