@@ -137,6 +137,13 @@ rescue BrightData::Error => e
 end
 ```
 
+## Documentation for AI agents
+
+[`llm.md`](llm.md) is a single-file, LLM-friendly reference generated from the
+gem's YARD documentation. Point a coding assistant at it for the full API
+surface and usage examples. Regenerate it with `bin/prepare_release` (or
+`bundle exec yardoc --format=markdown && bin/generate_llm.rb`).
+
 ## License
 
 Released under the [MIT License](LICENSE.txt).

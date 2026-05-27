@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
+require "bundler/gem_tasks"
 require "rake/testtask"
+require "rubocop/rake_task"
+require "yard"
 
 Rake::TestTask.new(:test) do |t|
   t.libs << "test" << "lib"
@@ -12,4 +15,8 @@ Rake::TestTask.new("test:live") do |t|
   t.test_files = FileList["test/live/**/*_test.rb"]
 end
 
-task default: :test
+RuboCop::RakeTask.new
+
+YARD::Rake::YardocTask.new
+
+task default: %i[test rubocop]

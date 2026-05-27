@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Regenerate docs + llm.md, then build the gem.
+bundle exec yardoc --format=markdown
+bin/generate_llm.rb
+bundle exec rake build
