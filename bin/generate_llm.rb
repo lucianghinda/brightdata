@@ -41,9 +41,18 @@ puts "Updated #{main_path} (#{links.size} links)"
 
 FileUtils.cp(main_path, llm_path)
 
-# Rewrite the per-class links so they resolve from the repo root (doc/...).
+# Rewrite every relative .md link so it resolves from the repo root (doc/...).
+# YARD emits links like `[Foo](Foo.md)` or `[Foo](BrightData/Foo.md)`, which
+# would 404 from llm.md at the repo root; prefix them with `doc/` unless they
+# already start with a scheme, anchor, or absolute path.
 llm_doc = File.read(llm_path)
-llm_doc = llm_doc.gsub(%r{\[BrightData/}, "[doc/BrightData/")
-llm_doc = llm_doc.gsub(%r{\(BrightData/}, "(doc/BrightData/")
+llm_doc = llm_doc.gsub(/(\]\()([^)\s#]+\.md)([)#])/) do
+  prefix, target, suffix = ::Regexp.last_match.values_at(1, 2, 3)
+  if target.start_with?("doc/", "http://", "https://", "/")
+    "#{prefix}#{target}#{suffix}"
+  else
+    "#{prefix}doc/#{target}#{suffix}"
+  end
+end
 File.write(llm_path, llm_doc)
 puts "Wrote #{llm_path}"
