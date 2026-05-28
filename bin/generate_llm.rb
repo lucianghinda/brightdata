@@ -47,7 +47,7 @@ FileUtils.cp(main_path, llm_path)
 # already start with a scheme, anchor, or absolute path.
 llm_doc = File.read(llm_path)
 llm_doc = llm_doc.gsub(/(\]\()([^)\s#]+\.md)([)#])/) do
-  prefix, target, suffix = ::Regexp.last_match.values_at(1, 2, 3)
+  prefix, target, suffix = Regexp.last_match.values_at(1, 2, 3)
   if target.start_with?("doc/", "http://", "https://", "/")
     "#{prefix}#{target}#{suffix}"
   else
