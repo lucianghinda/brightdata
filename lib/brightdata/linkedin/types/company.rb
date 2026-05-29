@@ -3,7 +3,7 @@
 module BrightData
   module LinkedIn
     module Types
-      # Typed representation of a LinkedIn company response.
+      # Immutable value object representing a LinkedIn company response.
       #
       # @!attribute [r] id
       #   @return [String, nil] company ID
@@ -49,7 +49,7 @@ module BrightData
       #   @return [Array<Hash>, nil] affiliated companies
       # @!attribute [r] raw
       #   @return [Hash] full parsed API response
-      # @note Use #raw to access fields not yet typed by this gem.
+      # @note Use #raw to access fields the gem does not yet model.
       Company = Data.define(
         :id, :name, :country_code, :locations, :followers,
         :employees_in_linkedin, :company_size, :industries, :specialties,

@@ -3,7 +3,7 @@
 module BrightData
   module LinkedIn
     module Types
-      # Typed representation of a LinkedIn post response.
+      # Immutable value object representing a LinkedIn post response.
       #
       # @!attribute [r] id
       #   @return [String, nil] post ID
@@ -33,7 +33,7 @@ module BrightData
       #   @return [Hash, nil] original post details
       # @!attribute [r] raw
       #   @return [Hash] full parsed API response
-      # @note Use #raw to access fields not yet typed by this gem.
+      # @note Use #raw to access fields the gem does not yet model.
       Post = Data.define(
         :id, :user_id, :headline, :post_text, :date_posted, :hashtags,
         :embedded_links, :images, :videos, :likes, :comments_count,

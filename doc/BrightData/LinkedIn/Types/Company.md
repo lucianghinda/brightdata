@@ -2,9 +2,9 @@
 
 **Inherits:** `Data`
 
-Typed representation of a LinkedIn company response.
+Immutable value object representing a LinkedIn company response.
 
-- **@note** Use #raw to access fields not yet typed by this gem.
+- **@note** Use #raw to access fields the gem does not yet model.
 
 ## Attributes
 ### `affiliated` [R] <a id="attribute-i-affiliated"></a> <a id="affiliated-instance_method"></a>

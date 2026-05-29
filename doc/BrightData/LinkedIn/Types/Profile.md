@@ -2,9 +2,9 @@
 
 **Inherits:** `Data`
 
-Typed representation of a LinkedIn profile response.
+Immutable value object representing a LinkedIn profile response.
 
-- **@note** Use #raw to access fields not yet typed by this gem.
+- **@note** Use #raw to access fields the gem does not yet model.
 
 ## Attributes
 ### `about` [R] <a id="attribute-i-about"></a> <a id="about-instance_method"></a>

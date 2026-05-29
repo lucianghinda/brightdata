@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Lucian Ghinda"]
   spec.email = ["dev@ghinda.com"]
   spec.summary = "Ruby client for Bright Data scraper APIs"
-  spec.description = "A typed, ergonomic Ruby client for Bright Data's Datasets v3 APIs, with LinkedIn endpoints."
+  spec.description = "A small, ergonomic Ruby client for Bright Data's Datasets v3 APIs. Returns parsed results as immutable Data value objects with named readers. Ships LinkedIn endpoints."
   spec.homepage = "https://github.com/lucianghinda/brightdata"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.4.4"

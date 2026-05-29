@@ -2,9 +2,10 @@
 
 module BrightData
   module LinkedIn
-    # Typed input and output value objects for LinkedIn endpoints.
+    # Input and output value objects for LinkedIn endpoints. Each class is an
+    # immutable `Data` struct with named readers; values are not type-checked.
     module Types
-      # Typed representation of a LinkedIn profile response.
+      # Immutable value object representing a LinkedIn profile response.
       #
       # @!attribute [r] id
       #   @return [String, nil] profile ID
@@ -42,7 +43,7 @@ module BrightData
       #   @return [String, nil] requested input URL
       # @!attribute [r] raw
       #   @return [Hash] full parsed API response
-      # @note Use #raw to access fields not yet typed by this gem.
+      # @note Use #raw to access fields the gem does not yet model.
       Profile = Data.define(
         :id, :name, :city, :country_code, :position, :about,
         :current_company, :experience, :education, :connections, :followers,

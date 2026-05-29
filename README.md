@@ -1,7 +1,8 @@
 # brightdata
 
-A typed, ergonomic Ruby client for [Bright Data](https://brightdata.com)'s
-Datasets v3 scraper APIs. Version 0.1.0 ships the LinkedIn endpoints.
+A small, ergonomic Ruby client for [Bright Data](https://brightdata.com)'s
+Datasets v3 scraper APIs. Returns parsed results as immutable `Data` value
+objects with named readers. Version 0.1.0 ships the LinkedIn endpoints.
 
 ## Installation
 
@@ -36,7 +37,7 @@ Optional keyword arguments:
 
 Every endpoint exposes two methods:
 
-- `#scrape(...)` runs synchronously and returns parsed, typed results. Bright
+- `#scrape(...)` runs synchronously and returns parsed value-object results. Bright
   Data caps synchronous scrapes at 60 seconds; if a job exceeds that,
   `scrape` raises `BrightData::ScrapeTimeoutError`, which carries a resumable
   snapshot (`error.snapshot`).
@@ -100,15 +101,20 @@ jobs = client.linkedin.jobs.discover_by_keyword.scrape(queries: [query])
 ## Result types
 
 Results are immutable `Data` value objects (`Types::Profile`, `Types::Company`,
-`Types::Job`, `Types::Post`, `Types::DiscoveredProfile`). Each exposes typed
+`Types::Job`, `Types::Post`, `Types::DiscoveredProfile`). Each exposes named
 readers for the common fields plus `#raw`, the full parsed response hash, so you
-can reach fields the gem does not yet type:
+can reach fields the gem does not yet model:
 
 ```ruby
 profile = profiles.first
-profile.name        # typed reader
-profile.raw[:posts] # anything not yet typed
+profile.name        # named reader
+profile.raw[:posts] # anything not yet modelled
 ```
+
+The readers are not type-checked - `Data.define` gives you immutable structs
+with named fields, not static types. Treat them as a stable, documented shape
+for the common case, and reach for `#raw` when the API returns something the
+gem does not yet cover.
 
 ## Error handling
 

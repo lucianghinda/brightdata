@@ -2,9 +2,9 @@
 
 **Inherits:** `Data`
 
-Typed representation of a LinkedIn post response.
+Immutable value object representing a LinkedIn post response.
 
-- **@note** Use #raw to access fields not yet typed by this gem.
+- **@note** Use #raw to access fields the gem does not yet model.
 
 ## Attributes
 ### `comments_count` [R] <a id="attribute-i-comments_count"></a> <a id="comments_count-instance_method"></a>

@@ -2,9 +2,9 @@
 
 **Inherits:** `Data`
 
-Typed representation of a LinkedIn job response.
+Immutable value object representing a LinkedIn job response.
 
-- **@note** Use #raw to access fields not yet typed by this gem.
+- **@note** Use #raw to access fields the gem does not yet model.
 
 ## Attributes
 ### `company_logo` [R] <a id="attribute-i-company_logo"></a> <a id="company_logo-instance_method"></a>

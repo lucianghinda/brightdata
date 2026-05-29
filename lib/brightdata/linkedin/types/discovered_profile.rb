@@ -3,7 +3,7 @@
 module BrightData
   module LinkedIn
     module Types
-      # Typed representation of a discovered LinkedIn profile response.
+      # Immutable value object representing a discovered LinkedIn profile response.
       #
       # @!attribute [r] url
       #   @return [String, nil] profile URL
@@ -21,7 +21,7 @@ module BrightData
       #   @return [String, nil] avatar URL
       # @!attribute [r] raw
       #   @return [Hash] full parsed API response
-      # @note Use #raw to access fields not yet typed by this gem.
+      # @note Use #raw to access fields the gem does not yet model.
       DiscoveredProfile = Data.define(:url, :name, :subtitle, :location, :experience, :education, :avatar, :raw) do
         # Build a discovered profile from a symbol-keyed API response.
         #

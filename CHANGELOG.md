@@ -23,9 +23,9 @@ Initial public release.
 - `BrightData::Snapshot#wait` polling with configurable `timeout` and
   `poll_interval`, returning a `BrightData::Result` (`SimpleResult::Success` or
   `Failure`).
-- Typed `Data`-backed result objects (`Profile`, `Company`, `Job`, `Post`,
+- Immutable `Data`-backed result objects (`Profile`, `Company`, `Job`, `Post`,
   `DiscoveredProfile`) and input objects (`JobKeywordInput`,
-  `PeopleDiscoverInput`, and `*UrlInput` variants), each exposing typed readers
+  `PeopleDiscoverInput`, and `*UrlInput` variants), each exposing named readers
   plus `#raw`.
 - Error hierarchy rooted at `BrightData::Error`: `ConfigurationError`,
   `ArgumentError`, `AuthError`, `HTTPError`, `RateLimitError` (`#retry_after`),

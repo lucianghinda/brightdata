@@ -17,19 +17,20 @@ require_relative "brightdata/version"
 require_relative "brightdata/result"
 require_relative "brightdata/errors"
 
-# A typed, ergonomic Ruby client for Bright Data's Datasets v3 scraper APIs.
+# A small, ergonomic Ruby client for Bright Data's Datasets v3 scraper APIs.
 #
 # Create a {Client} with an API token, then reach endpoints through namespaces
 # such as `client.linkedin`. Every endpoint exposes two methods:
 #
-# - `#scrape(...)` runs synchronously and returns parsed, typed results. Bright
-#   Data caps synchronous scrapes at 60 seconds; if a job exceeds that, it
-#   raises {ScrapeTimeoutError}, which carries a resumable {Snapshot}.
+# - `#scrape(...)` runs synchronously and returns parsed value-object results.
+#   Bright Data caps synchronous scrapes at 60 seconds; if a job exceeds that,
+#   it raises {ScrapeTimeoutError}, which carries a resumable {Snapshot}.
 # - `#trigger(...)` starts an asynchronous collection and returns a {Snapshot}
 #   you poll with `#wait`.
 #
-# Results are immutable `Data` value objects exposing typed readers plus `#raw`,
-# the full parsed response hash. All errors inherit from {Error}.
+# Results are immutable `Data` value objects exposing named readers plus `#raw`,
+# the full parsed response hash. The readers are not type-checked - `Data.define`
+# gives shape, not static types. All errors inherit from {Error}.
 #
 # @example Synchronous scrape
 #   client = BrightData::Client.new(api_token: ENV.fetch("BRIGHTDATA_API_TOKEN"))

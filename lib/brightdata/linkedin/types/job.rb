@@ -3,7 +3,7 @@
 module BrightData
   module LinkedIn
     module Types
-      # Typed representation of a LinkedIn job response.
+      # Immutable value object representing a LinkedIn job response.
       #
       # @!attribute [r] url
       #   @return [String, nil] job URL
@@ -25,7 +25,7 @@ module BrightData
       #   @return [String, nil] company logo URL
       # @!attribute [r] raw
       #   @return [Hash] full parsed API response
-      # @note Use #raw to access fields not yet typed by this gem.
+      # @note Use #raw to access fields the gem does not yet model.
       Job = Data.define(
         :url, :job_posting_id, :job_title, :company_name, :job_location,
         :job_summary, :job_base_pay_range, :job_posted_time, :company_logo, :raw

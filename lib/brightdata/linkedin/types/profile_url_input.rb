@@ -2,7 +2,8 @@
 
 module BrightData
   module LinkedIn
-    # Typed input and output value objects for LinkedIn endpoints.
+    # Input and output value objects for LinkedIn endpoints. Each class is an
+    # immutable `Data` struct with named readers; values are not type-checked.
     module Types
       # Input shape for `linkedin.profiles.{trigger,scrape}`.
       #

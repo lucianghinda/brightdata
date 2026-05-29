@@ -34,7 +34,7 @@ module BrightData
 
     # @param id [String] snapshot ID from `/datasets/v3/trigger`
     # @param http [BrightData::HTTP] HTTP wrapper
-    # @param result_parser [#call] callable mapping raw result arrays to typed results
+    # @param result_parser [#call] callable mapping raw result arrays to value-object results
     def initialize(id:, http:, result_parser: ->(raw) { raw })
       @id = id
       @http = http

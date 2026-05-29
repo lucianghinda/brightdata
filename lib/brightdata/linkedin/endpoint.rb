@@ -33,7 +33,7 @@ module BrightData
         # instance of that type).
         #
         # @param dataset_key [Symbol] key in {BrightData::Datasets::LINKEDIN}
-        # @param result [#from_api] typed result class for parsing responses
+        # @param result [#from_api] result class for parsing responses
         # @param param [Symbol] public keyword argument name, e.g. `:urls`
         # @param input [Class, nil] URL-input class wrapping each string value
         # @param input_type [Class, nil] required type for each pre-built value
